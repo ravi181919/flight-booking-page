@@ -7,7 +7,10 @@ This project is a React application for booking flights and managing bookings.
 - **Navbar**: Navigate through different sections of the app.
 - **Home Page**: View spring gateway deals, fly higher for triple points, and deals on top shelf seats.
 - **Search Flights**: Search for flights by selecting guests, departure city, and destination city.
+<<<<<<< HEAD
 - **Responsive Design**: The application is designed to work on various screen sizes.
+=======
+>>>>>>> e57a5c81c346d32a7a8be1b8a6ddcf5681b1b624
 
 ## Installation
 
