@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 
 function Home() {
   const cardDetails = [
@@ -25,18 +26,26 @@ function Home() {
 
   const inputDetails = [
     {
-        label:'Guests',
-        status:'Adult',
+      label: "Guests",
+      status: "Adult",
+      optionFirst:"married",
+      optionSecond:"UnMarried",
     },
     {
-        label:'From',
-        status:'New york city',
+      label: "From",
+      status: "New york city",
+      optionFirst:"London",
+      optionSecond:"America",
     },
     {
-        label:'to',
-        status:'city',
-    }
-  ]
+      label: "To",
+      status: "city",
+      optionFirst:"India",
+      optionSecond:"China",
+    },
+  ];
+
+
   return (
     <div className="home w-full bg-white">
       <div className="h-1/2 w-full flex items-center justify-start flex-col gap-7">
@@ -44,24 +53,32 @@ function Home() {
           Where Would you like to go?
         </h1>
         <div className="flex gap-4 w-full justify-between px-32 ">
-          {inputDetails.map((el, ind) => (<div key={ind} className="flex relative">
-            <label for="guests" className=" text-[1vw] absolute left-3 ">
-              {el.label}
-            </label>
-            <select
-              id="guests"
-              name="guests"
-              className="pl-2 pr-52 py-[10px] border-black border outline-none  text-xl uppercase tracking-tight"
-            >
-              <option value={el.status} className="text-sm">
-               {el.status}
-              </option>
-            </select>
-          </div>))}
+          {inputDetails.map((el, ind) => (
+            <div key={ind} className="flex relative">
+              <label htmlFor="optionBio" className=" text-[1vw] absolute left-3 ">
+                {el.label}
+              </label>
+              <select
+                id="optionBio"
+                name="optionBio"
+                className="pl-2 pr-52 py-[10px] border-black border outline-none  text-xl uppercase tracking-tight"
+              >
+                <option value={el.status} className="text-sm">
+                  {el.status}
+                </option>
+                <option value={el.optionFirst} className="text-sm">
+                  {el.optionFirst}
+                </option>
+                <option value={el.optionSecond} className="text-sm">
+                  {el.optionSecond}
+                </option>
+              </select>
+            </div>
+          ))}
         </div>
         <div className="btn">
           <button className="border-black border-[1.5px] px-5 py-2 uppercase font-medium">
-            search flights
+           search flights
           </button>
         </div>
       </div>
